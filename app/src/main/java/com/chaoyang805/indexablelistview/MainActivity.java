@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
 import android.widget.SectionIndexer;
 
+import com.chaoyang805.indexablelistview.utils.StringMatcher;
 import com.chaoyang805.indexablelistview.view.IndexableListView;
 
 import java.util.ArrayList;
@@ -88,10 +89,17 @@ public class MainActivity extends AppCompatActivity {
                 for (int j = 0; j < getCount(); j++) {
                     if (i == 0) {
                         //查询数字
+                        for (int k = 0; k < 10; k++) {
+                            if (StringMatcher.match(String.valueOf(k), String.valueOf(getItem(j).charAt(0)))) {
+                                return j;
+                            }
 
+                        }
                     }else {
                         //查询字母
-
+                        if (StringMatcher.match(getSections()[i], String.valueOf(getItem(j).charAt(0)))) {
+                            return j;
+                        }
                     }
                 }
             }

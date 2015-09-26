@@ -9,5 +9,5 @@
     <com.chaoyang805.indexablelistview.view.IndexableListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.chaoyang805.indexablelistview.view.IndexableListView>
+        android:layout_height="match_parent"></com.chaoyang805.indexablelistview.view.IndexableListView>
 </RelativeLayout>
